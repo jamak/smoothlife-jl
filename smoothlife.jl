@@ -48,6 +48,7 @@ function func_linear(x, a, b)
         return 1
     else
         return (x -1(a+b)//2)/b
+    end
 end
 
 sigmoid_a(x, a, b) =  1 ./(1+exp(-4(x-a)/b))
