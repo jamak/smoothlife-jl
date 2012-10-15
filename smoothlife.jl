@@ -81,3 +81,10 @@ function splat(aa, ny, nx, ra)
 	end
     return aa
 end
+
+function initaa (ny, nx, ra)
+	aa = zeros(ny,nx)
+	for t in 0:((nx/ra)*(ny/ra))
+		aa = splat (aa, ny, nx, ra)
+	end
+end
