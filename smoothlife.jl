@@ -65,9 +65,9 @@ function snm(n, m, en, em, b1, b2, d1, d2)
 end
 
 function splat(aa, ny, nx, ra)
-	x = fix(rand()*nx)+1;
-	y = fix(rand()*ny)+1;
-	c = rand()>0.5;
+	x = fix(rand()*nx)+1
+	y = fix(rand()*ny)+1
+	c = rand()>0.5
 
 	for dx in -ra:ra
         for dy in -ra:ra
