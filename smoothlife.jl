@@ -11,12 +11,12 @@ function smoothlife()
     alphan = 0.028
     alpham = 0.147
 
-    kd = zeros(NY,NX)
-    kr = zeros(NY,NX)
-    for iy in 1:NY
-        for ix in 1:NX
-            x = ix - 1 - NX/2
-            y = iy - 1 - NY/2
+    kd = zeros(ny,nx)
+    kr = zeros(ny,nx)
+    for iy in 1:ny
+        for ix in 1:nx
+            x = ix - 1 - nx/2
+            y = iy - 1 - ny/2
             r = hypot(x,y)
             kd[iy,ix] = 1-func_linear(r, ri, b)
             kr[iy,ix] = func_linear(r, ri, b)*(1-func_linear(r, ra, b))
@@ -27,7 +27,7 @@ function smoothlife()
     krf  = fft2(fftshift(kr))
     kdf  = fft2(fftshift(kd))
 
-    aa = initaa(NY,NX,ra)
+    aa = initaa(ny,nx,ra)
 	while true
 		aaf = fft2(aa)
 		nf = aaf.*krf
