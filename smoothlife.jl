@@ -42,12 +42,12 @@ function smoothlife()
 end
 
 function func_linear(x, a, b)
-    if x < (a-b)//2
+    if x < (a-b)/2
         return 0
-    elseif x > (a+b)//2
+    elseif x > (a+b)/2
         return 1
     else
-        return (x -1(a+b)//2)/b
+        return (x -1(a+b)/2)/b
     end
 end
 
